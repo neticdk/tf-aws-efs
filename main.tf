@@ -11,10 +11,6 @@ locals {
   }
 }
 
-data "aws_vpc" "selected" {
-  id = "${var.vpc_id}"
-}
-
 resource "aws_efs_file_system" "this" {
   encrypted = var.encrypted
 

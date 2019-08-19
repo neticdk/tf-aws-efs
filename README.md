@@ -27,7 +27,6 @@ module "efs" {
 | security\_group\_ids | Security group ids of security groups that control access to mount targets | list | n/a | yes |
 | subnet\_ids | Subnet IDs to create EFS mount targets on | list | n/a | yes |
 | tags | A map of tags to add to all resources | map | `<map>` | no |
-| vpc\_id | VPC to create EFS file systems in | string | n/a | yes |
 
 ## Outputs
 

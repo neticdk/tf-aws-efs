@@ -15,11 +15,6 @@ variable "name" {
   type        = string
 }
 
-variable "vpc_id" {
-  description = "VPC to create EFS file systems in"
-  type        = string
-}
-
 variable "subnet_ids" {
   description = "Subnet IDs to create EFS mount targets on"
   type        = list
