@@ -9,6 +9,8 @@ locals {
   tags = {
     Terraform = "true"
   }
+
+  all_tags = merge(var.tags, local.tags)
 }
 
 resource "aws_efs_file_system" "this" {
