@@ -36,11 +36,11 @@ resource "aws_cloudwatch_metric_alarm" "this" {
   count = var.monitoring_enabled ? 1 : 0
 
   alarm_name                = "${var.name} disk space exceeded"
-  comparison_operator       = "GreaterThanOrEqualToThreshold"
+  comparison_operator       = "GreaterThanThreshold"
   evaluation_periods        = "1"
   metric_name               = "EFS Size"
   namespace                 = "EFS Metrics"
-  period                    = "1800"
+  period                    = var.monitoring_period_seconds
   statistic                 = "Average"
   threshold                 = var.disk_space_kb_error_threshold
 
@@ -48,9 +48,8 @@ resource "aws_cloudwatch_metric_alarm" "this" {
     EFS_Name = var.name
   }
 
-  alarm_description         = "zd=${var.name} zs=error | disk space exceeded"
+  alarm_description         = "zd=${var.name} zs=${var.monitoring_severity} | disk space exceeded"
   alarm_actions             = [var.sns_topic]
   ok_actions                = [var.sns_topic]
-
   insufficient_data_actions = []
 }

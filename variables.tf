@@ -47,3 +47,15 @@ variable "sns_topic" {
   description = "ARN of SNS topic"
   type        = string
 }
+
+variable "monitoring_severity" {
+  description = "Monitoring severity"
+  type        = string
+  default     = "warning"
+}
+
+variable "monitoring_period_seconds" {
+  description = "Monitoring period in seconds"
+  type        = string
+  default     = "1800"
+}

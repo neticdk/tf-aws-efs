@@ -25,6 +25,8 @@ module "efs" {
 | disk\_space\_kb\_error\_threshold | Maximum disk space threshold in kilobytes | string | `"10485760"` | no |
 | encrypted | Encrypt filesystem | bool | `"true"` | no |
 | monitoring\_enabled | True if monitoring of this filesystem should be enabled | bool | `"false"` | no |
+| monitoring\_period\_seconds | Monitoring period in seconds | string | `"1800"` | no |
+| monitoring\_severity | Monitoring severity | string | `"warning"` | no |
 | name | File system name | string | n/a | yes |
 | security\_group\_ids | Security group ids of security groups that control access to mount targets | list | n/a | yes |
 | sns\_topic | ARN of SNS topic | string | n/a | yes |
