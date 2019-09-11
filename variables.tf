@@ -30,3 +30,20 @@ variable "encrypted" {
   type        = bool
   default     = true
 }
+
+variable "monitoring_enabled" {
+  description = "True if monitoring of this filesystem should be enabled"
+  type        = bool
+  default     = false
+}
+
+variable "disk_space_kb_error_threshold" {
+  description = "Maximum disk space threshold in kilobytes"
+  type        = string
+  default     = 10485760 // 10GB
+}
+
+variable "sns_topic" {¬
+  description = "ARN of SNS topic"¬
+  type        = string¬
+}¬
