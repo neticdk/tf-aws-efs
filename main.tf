@@ -40,7 +40,7 @@ resource "aws_cloudwatch_metric_alarm" "this" {
   evaluation_periods        = "1"
   metric_name               = "EFS Size"
   namespace                 = "EFS Metrics"
-  period                    = "60"
+  period                    = "1800"
   statistic                 = "Average"
   threshold                 = var.disk_space_kb_error_threshold
 
