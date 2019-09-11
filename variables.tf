@@ -43,7 +43,7 @@ variable "disk_space_kb_error_threshold" {
   default     = 10485760 // 10GB
 }
 
-variable "sns_topic" {¬
-  description = "ARN of SNS topic"¬
-  type        = string¬
+variable "sns_topic" {
+  description = "ARN of SNS topic"
+  type        = string
 }¬
