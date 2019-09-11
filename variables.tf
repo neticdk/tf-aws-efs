@@ -46,4 +46,4 @@ variable "disk_space_kb_error_threshold" {
 variable "sns_topic" {
   description = "ARN of SNS topic"
   type        = string
-}¬
+}
