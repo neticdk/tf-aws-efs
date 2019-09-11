@@ -33,7 +33,7 @@ resource "aws_efs_mount_target" "this" {
 }
 
 resource "aws_cloudwatch_metric_alarm" "this" {
-  count = var.monitoring_enabled
+  count = var.monitoring_enabled ? 1 : 0
 
   alarm_name                = "${var.name} disk space exceeded"
   comparison_operator       = "GreaterThanOrEqualToThreshold"
