@@ -49,8 +49,8 @@ resource "aws_cloudwatch_metric_alarm" "this" {
   }
 
   alarm_description         = "zd=${var.name} zs=error | disk space exceeded"
-  alarm_actions             = [var.sns_topic]¬
-  ok_actions                = [var.sns_topic]¬
+  alarm_actions             = [var.sns_topic]
+  ok_actions                = [var.sns_topic]
 
   insufficient_data_actions = []
 }
